@@ -4,8 +4,19 @@
     float: right;
     margin-top: -50px;
 }
-
+p {
+    color: black;
+    
+}
 /* fix search height */
 h3 {
     color: black;
 }
+
+.auth-image {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
