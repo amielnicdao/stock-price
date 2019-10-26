@@ -1,41 +1,54 @@
+// 8MKLVA7WLARZMNWP
 
-// var url = 'https://newsapi.org/v2/top-headlines?' +
-//           'country=us&' +
-//           'apiKey=6a8adef82f2546e38bfe6db61628cb26';
-// var req = new Request(url);
-// fetch(req)
-//     .then(function(response) {
-//         console.log(response.json());
+function displayStocks() {
 
-        
+    // event.preventDefault()
+    var stocks = $("#search").val();
+    var queryURL = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=" + stocks + "&apikey=8MKLVA7WLARZMNWP";
 
-//         var newsDiv = $("<div class='news'>");
-//         var displayNews = response.articles;
-//         var appendNews = $("<p>").text("News" + displayNews);
-//         newsDiv.append(appendNews);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+    })
+};
 
-//         $("#news").prepend(displayNews);
-    
-//     })
+$(document).on("keyup", function() {
+    displayStocks()
+} )
 
-
-
-
-
+   
 
 
 
 function displayNews() {
-    var url = 'https://newsapi.org/v2/top-headlines?' +
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' +
           'country=us&' +'apiKey=6a8adef82f2546e38bfe6db61628cb26'
 
     $.ajax({
 
-        url: url,
+        url: queryURL,
         method: "GET"
 
     }).then(function (response) {
         console.log(response);
+
+        for (var i=0; i < response.articles.length; i++) {
+
+            var newsDiv = $("<div class='newsDiv'>");
+                var description = response.articles[i].description;
+                var descriptionDiv = $("<p>").text(description);
+                var image = response.articles[i].urlToImage;
+                var imageDiv = $("<p>").text(image);
+
+                newsDiv.append(descriptionDiv);
+                newsDiv.prepend(imageDiv);
+                $("#news").prepend(descriptionDiv);
+
+        }
+
+    
 
     
 }
