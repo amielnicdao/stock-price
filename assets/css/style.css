@@ -4,12 +4,13 @@
     float: right;
     margin-top: -50px;
 }
-
+p {
+    color: black;
+    
+}
 /* fix search height */
 h3 {
     color: black;
 }
 
-#news {
-    color: black;
-}
+
