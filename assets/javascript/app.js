@@ -1,9 +1,7 @@
-// 8MKLVA7WLARZMNWP
+
 
 function displayStocks() {
-
-    // event.preventDefault()
-    var stocks = $("#search").val();
+    var stocks = $("#search").val().trim();
     var queryURL = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=" + stocks + "&apikey=8MKLVA7WLARZMNWP";
 
     $.ajax({
@@ -14,9 +12,15 @@ function displayStocks() {
     })
 };
 
-$(document).on("keyup", function() {
-    displayStocks()
-} )
+
+$("#input-stocks").on("click", function(event) {
+    
+    event.preventDefault();
+    
+    var stocks = $("#search").val().trim();
+    
+    displayStocks(stocks);
+});
 
    
 
