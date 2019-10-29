@@ -1,9 +1,7 @@
-// 8MKLVA7WLARZMNWP
+
 
 function displayStocks() {
-
-    // event.preventDefault()
-    var stocks = $("#search").val();
+    var stocks = $("#search").val().trim();
     var queryURL = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=" + stocks + "&apikey=8MKLVA7WLARZMNWP";
 
     $.ajax({
@@ -14,9 +12,15 @@ function displayStocks() {
     })
 };
 
-$(document).on("keyup", function() {
-    displayStocks()
-} )
+
+$("#input-stocks").on("click", function(event) {
+    
+    event.preventDefault();
+    
+    var stocks = $("#search").val().trim();
+    
+    displayStocks(stocks);
+});
 
    
 
@@ -34,20 +38,29 @@ function displayNews() {
     }).then(function (response) {
         console.log(response);
 
+        var tableDiv = $("<table/>")
+        
         for (var i=0; i < response.articles.length; i++) {
-
+            tableDiv.append("<tr><td>" + description + "</td></tr>")
             var newsDiv = $("<div class='newsDiv'>");
                 var description = response.articles[i].description;
-                var descriptionDiv = $("<p>").text(description);
+                // var descriptionDiv = $("<p>").text(description);
                 var image = response.articles[i].urlToImage;
-                var imageDiv = $("<p>").text(image);
+                var img = $("<img>")
+                img.attr("src", image)
+                // var imageDiv = $("<img>").attr("src", image);
+                // console.log(imageDiv)
+                img.appendTo("#news")
+                
+                // $("#image").append(imageDiv);
 
-                newsDiv.append(descriptionDiv);
-                newsDiv.prepend(imageDiv);
-                $("#news").prepend(descriptionDiv);
-
+                // newsDiv.append(descriptionDiv);
+                // newsDiv.prepend(imageDiv);
+                // $("#news").prepend(descriptionDiv);
+            
         }
-
+        $("#news").append(tableDiv);
+       
     
 
     

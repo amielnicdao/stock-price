@@ -8,9 +8,22 @@ p {
     color: black;
     
 }
+
+.auth-image {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+  #news {
+    color: black;
+  }
+  
 /* fix search height */
 h3 {
     color: black;
 }
+
 
 
