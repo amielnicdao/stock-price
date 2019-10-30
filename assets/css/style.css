@@ -25,7 +25,20 @@ h3 {
     color: black;
 }
 
+table {
+  color: black;
+  margin-top: 50px;
+}
 
+.wrapper {
+  width: 95%;
+  margin-left: 50px;
+}
+
+.nav-wrapper {
+  padding: 0px 40px;
+   
+}
 
 
 

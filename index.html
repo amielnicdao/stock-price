@@ -15,7 +15,7 @@
 <body>
 
   <!--Navbar  -->
-
+ 
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Stock.io</a>
@@ -30,11 +30,11 @@
     <br>
 
     <!-- Search Bar -->
-
+    <div class="wrapper">
     <div class="container">
       <nav>
 
-        <div class="nav-wrapper">
+        <div id="nav-wrapper">
           <form>
             <div class="input-field">
               <!-- <input id="search" type="search" required> -->
@@ -52,20 +52,44 @@
       </nav>
     </div>
 
+    <br>
+
 
     <!-- Market Summary -->
-    <h3>Market Summary</h3>
+    <h3 class="market">Market Summary</h3>
 
     <div id="market-summary"></div>
 
     <!-- Company Summary -->
+    <h3>Company Summary</h3>
+
+    <table class="striped">
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="company-api"> 
+          <td class="name"></td> 
+          <td class="open"></td>
+          <td class="high"></td>
+          <td class="low"></td>
+          <td class="price"><td>
+        </tr>
+      </tbody>
+    </table>
 
     <div id="company-summary"></div>
 
     <!-- News -->
-   
-    <h3>News</h3>
-<!-- 
+    <h3>Top Business News</h3>
+
     <div id="news"> 
       <div id="image">
         
@@ -98,9 +122,12 @@
 
 
 
+ 
     <script src="assets/javascript/app.js" type="text/javascript"></script>
 
 
 </body>
 
 </html>
+
+<!-- give element to td, append td to row -->
