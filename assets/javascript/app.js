@@ -38,28 +38,37 @@ function displayNews() {
     }).then(function (response) {
         console.log(response);
 
-        var tableDiv = $("<table/>")
+        // var tableDiv = $("<table/>")
         
         for (var i=0; i < response.articles.length; i++) {
-            tableDiv.append("<tr><td>" + description + "</td></tr>")
-            var newsDiv = $("<div class='newsDiv'>");
-                var description = response.articles[i].description;
+            // tableDiv.append("<tr><td>" + description + "</td></tr>")
+            // var newsDiv = $("<div class='newsDiv'>");
+            var description = response.articles[i].description;
+                var test = $("<div>")
+                var textDiv = $("<p>")
+                textDiv.text(description)
+                test.append(textDiv)
+                
+
+                
                 // var descriptionDiv = $("<p>").text(description);
                 var image = response.articles[i].urlToImage;
                 var img = $("<img>")
                 img.attr("src", image)
+
+                test.append(img)
                 // var imageDiv = $("<img>").attr("src", image);
                 // console.log(imageDiv)
-                img.appendTo("#news")
+                // img.appendTo("#news")
                 
                 // $("#image").append(imageDiv);
 
                 // newsDiv.append(descriptionDiv);
                 // newsDiv.prepend(imageDiv);
                 // $("#news").prepend(descriptionDiv);
-            
+                $("#news").append(test);  
         }
-        $("#news").append(tableDiv);
+        
        
     
 
