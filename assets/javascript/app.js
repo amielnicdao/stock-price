@@ -1,4 +1,38 @@
-
+function displaySummary() {
+    var settings = {
+     "async": true,
+     "crossDomain": true,
+     "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-summary?region=US&lang=en",
+     "method": "GET",
+     "headers": {
+         "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+         "x-rapidapi-key": "d4f983eb80msha2a2ec7abf9e9f1p1ae353jsnd376774df4a6"
+     }
+ }
+ $.ajax(settings).done(function (response) {
+    console.log(response);
+    for (var i=0; i < 6 ; i++) {
+        var indexName = response.marketSummaryResponse.result[i].shortName;
+        var indexPrice = response.marketSummaryResponse.result[i].regularMarketPrice.fmt;
+        var indexPreviousClose = response.marketSummaryResponse.result[i].regularMarketPreviousClose.fmt;
+        var indexChange = response.marketSummaryResponse.result[i].regularMarketChange.fmt;
+        var indexChangePercent = response.marketSummaryResponse.result[i].regularMarketChangePercent.fmt;
+        // console.log(indexName);
+        // console.log(indexPrice);
+        // console.log(indexPreviousClose );
+        // console.log(indexChange);
+        // console.log(indexChangePercent);
+        var list = $("<ul>");
+        list.append($("<li>").text(indexName));
+        list.append($("<li>").text(indexPrice));
+        list.append($("<li>").text(indexPreviousClose));
+        list.append($("<li>").text(indexChange));
+        list.append($("<li>").text(indexChangePercent));
+        $(".marketSum").append(list);
+    }
+ })
+ }
+ displaySummary()
 
 function displayStocks() {
     var stocks = $("#search").val().trim();
@@ -71,7 +105,7 @@ $("#input-stocks").on("click", function(event) {
 
 function displayNews() {
     var queryURL = 'https://newsapi.org/v2/top-headlines?' +
-          'country=us&category=business&' +'apiKey=6a8adef82f2546e38bfe6db61628cb26'
+          'country=us&category=business&pageSize=5&' +'apiKey=6a8adef82f2546e38bfe6db61628cb26'
 
     $.ajax({
 
@@ -86,12 +120,20 @@ function displayNews() {
         for (var i=0; i < response.articles.length; i++) {
             // tableDiv.append("<tr><td>" + description + "</td></tr>")
             // var newsDiv = $("<div class='newsDiv'>");
-            var description = response.articles[i].description;
-                var test = $("<div>")
-                var textDiv = $("<p>")
-                textDiv.text(description)
-                test.append(textDiv)
+            var newsTitle = response.articles[i].title;
+                var title = $("<div>")
+                var titleDiv = $("<p>")
+                titleDiv.text(newsTitle)
+                title.append(titleDiv)
                 
+                var newsURL = response.articles[i].url;
+                var url = $("<a href='" + url + "'>" + url + "</a>");
+                var urlDiv = $("<p>")
+                // var urlDiv = $("<a href='" + url + "'>" + url)
+                urlDiv.text(newsURL)
+                url.append(urlDiv)
+
+                title.append(url)
 
                 
                 // var descriptionDiv = $("<p>").text(description);
@@ -99,7 +141,7 @@ function displayNews() {
                 var img = $("<img>")
                 img.attr("src", image)
 
-                test.append(img)
+                title.append(img)
                 // var imageDiv = $("<img>").attr("src", image);
                 // console.log(imageDiv)
                 // img.appendTo("#news")
@@ -109,7 +151,7 @@ function displayNews() {
                 // newsDiv.append(descriptionDiv);
                 // newsDiv.prepend(imageDiv);
                 // $("#news").prepend(descriptionDiv);
-                $("#news").append(test);  
+                $("#news").append(title);  
         }
         
        

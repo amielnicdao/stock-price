@@ -1,8 +1,23 @@
+/* body {
+  background-color: #A1A1A1;
+} */
+
 .container {
     width: 400px;
-    height: 25px;
+    height: 20px;
     float: right;
     margin-top: -50px;
+    
+}
+
+.input-field {
+   background-color:#3FB567;
+   height: 10px;
+}
+
+#input-stocks {
+  background-color:#3FB567;
+  
 }
 p {
     color: black;
@@ -37,6 +52,7 @@ table {
 
 .nav-wrapper {
   padding: 0px 40px;
+  background-color: #3FB567;
    
 }
 
@@ -50,3 +66,41 @@ table {
   float:right;
 }
 
+ul {
+  color: black;
+}
+
+.market {
+  background: #0039BE;
+  color: white;
+}
+
+.company {
+  background: #ECC000;
+  color: white;
+}
+
+.business {
+  background: #CC1800;
+  color: white;
+}
+/* 
+.mrkt {
+  border: 1px solid grey;
+} */
+
+.buysell {
+  width: 90%;
+  margin-left: 70px;
+}
+
+.collection {
+  width: 90%;
+  margin-left: 70px;
+  margin-top: 125px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
