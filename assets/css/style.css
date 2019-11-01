@@ -7,67 +7,61 @@
     height: 20px;
     float: center;
     margin-top: -50px;
-    
 }
 
 .input-field {
    background-color:#3FB567;
    height: 10px;
-  
 }
 
 #input-stocks {
   background-color:#3FB567;
   float: center;
-  
 }
+
 p {
-    color: black;
-    
+    color: black;  
 }
 
 .auth-image {
     float: left;
     width: 200px;
     height: 200px;
-    margin-top: 10px;
+    /* margin-top: 15px; */
     margin-right: 25px;
   }
+
   #news {
     color: black;
   }
   
-/* fix search height */
 h3 {
     color: black;
 }
 
-table {
+/* table {
   color: black;
   margin-top: 50px;
-}
+} */
 
-.wrapper {
+.search {
   width: 95%;
   margin-left: 50px;
+  margin-top: 50px;
 }
 
 .nav-wrapper {
   padding: 0px 70px;
-  background-color: #3FB567;
- 
-
-   
+  background-color: #3FB567; 
 }
-
-
 
 #news{
   size: 30px;
- 
 }
-#image{
-  float:right;
+
+.card {
+  height: 75%;
+  width: 75%;
 }
 
 ul {
@@ -77,21 +71,31 @@ ul {
 .market {
   background: #0039BE;
   color: white;
+  margin-top: 75px;
+  padding: 5px 25px;
+  width: 20%;
+}
+
+.tableClass {
+  float: center;
 }
 
 .company {
   background: #ECC000;
   color: white;
+  margin-top: 75px;
+  padding: 5px 25px;
+  width: 20%;
 }
 
 .business {
   background: #CC1800;
   color: white;
+  margin-top: 75px;
+  padding: 5px 25px;
+  width: 20%;
+  margin-bottom: 25px;
 }
-/* 
-.mrkt {
-  border: 1px solid grey;
-} */
 
 .buysell {
   width: 90%;
@@ -115,49 +119,46 @@ img {
 }
 
 #totop{
-  float: left;
   color:blue;
   padding-bottom: 5px;
 }
+
 #secondrow{
-  clear: both;
-  float: left;
   padding-bottom: 5px;
 }
+
 #thirdrow{
-  clear: both;
-  float: left;
   padding-bottom: 5px;
 }
+
 #fourrow{
-  clear: both;
-  float: left;
   padding-bottom: 5px;
 }
+
 #fiverow{
-  clear: both;
-  float: left;
   padding-bottom: 5px;
 }
-/* fix search height */
+
 h3 {
   color: black;
 }
-/* td {
-  margin-left: 10px;
-} */
+
 .firstRowClass {
   padding-right: 60px;
 }
+
 .secondRowClass {
   padding-right: 62px;
 }
+
 .thirdRowClass {
   padding-right: 62px;
 }
+
 .fourRowClass {
   padding-right: 81px;
 }
+
 .fiveRowClass {
   padding-right: 73px;
 }
