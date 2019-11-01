@@ -38,8 +38,8 @@
             <form>
               <div class="input-field">
                 <!-- <input id="search" type="search" required> -->
-                <input id="search" type="text">
-                <label class="label-icon" for="search"><i class="material-icons">Enter Company Ticker</i></label>
+                <input id="search" type="text" placeholder="Enter Company Ticker">
+                <!-- <label class="label-icon" for="search" placeholder="Enter Company Ticker"></label> -->
                 <!-- <i class="material-icons">close</i> -->
               </div>
             </form>
@@ -55,21 +55,16 @@
 
       <!-- Market Summary -->
       <div id="market-summary" class="mrkt">
-        <h3 class="market">Market Summary</h3>
+        <h5 class="market">Market Summary</h5>
 
-        <ul class="marketSum">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-
-      <br><br>
+        
+        <div class="marketSum">
+            <div class="indexList">
+           </div>
+        </div>
 
       <!-- Company Summary -->
-      <h3 class="company">Company Summary</h3>
+      <h5 class="company">Company Summary</h5>
 
       <table class="striped">
         <thead>
@@ -97,21 +92,13 @@
       <div id="company-summary"></div>
 
       <!-- News -->
-      <h3 class="business">Top Business News</h3>
+      <h5 class="business">Top Business News</h5>
 
       <div id="news">
         <div id="image">
 
         </div>
-      
-      <div class="row">
-        <!-- <div id="news">  -->
-        <div class="col-sm-6">
-          <br>
-          <div class="card">
-            <div class="card-header">
-              <!-- <i class ="fa fa table">Top News</i>  -->
-              <div class="card-body" id="news-section">
+    
 
                 <div id="news">
                   <!-- <div id="image">
@@ -129,10 +116,11 @@
       </div> 
         <!-- </div> -->
 
+<!-- CARD -->
 
 
 
-
+<!-- append card content to card stacked -->
 
         <script src="assets/javascript/app.js" type="text/javascript"></script>
 

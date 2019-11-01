@@ -1,11 +1,11 @@
-/* body {
-  background-color: #A1A1A1;
-} */
+/* body { */
+  /* background-color:black; */
+ /* }  */
 
 .container {
     width: 400px;
     height: 20px;
-    float: right;
+    float: center;
     margin-top: -50px;
     
 }
@@ -13,10 +13,12 @@
 .input-field {
    background-color:#3FB567;
    height: 10px;
+  
 }
 
 #input-stocks {
   background-color:#3FB567;
+  float: center;
   
 }
 p {
@@ -51,8 +53,10 @@ table {
 }
 
 .nav-wrapper {
-  padding: 0px 40px;
+  padding: 0px 70px;
   background-color: #3FB567;
+ 
+
    
 }
 
@@ -103,4 +107,57 @@ ul {
 img {
   width: 250px;
   height: 250px;
+}
+
+.striped {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+#totop{
+  float: left;
+  color:blue;
+  padding-bottom: 5px;
+}
+#secondrow{
+  clear: both;
+  float: left;
+  padding-bottom: 5px;
+}
+#thirdrow{
+  clear: both;
+  float: left;
+  padding-bottom: 5px;
+}
+#fourrow{
+  clear: both;
+  float: left;
+  padding-bottom: 5px;
+}
+#fiverow{
+  clear: both;
+  float: left;
+  padding-bottom: 5px;
+}
+/* fix search height */
+h3 {
+  color: black;
+}
+/* td {
+  margin-left: 10px;
+} */
+.firstRowClass {
+  padding-right: 60px;
+}
+.secondRowClass {
+  padding-right: 62px;
+}
+.thirdRowClass {
+  padding-right: 62px;
+}
+.fourRowClass {
+  padding-right: 81px;
+}
+.fiveRowClass {
+  padding-right: 73px;
 }
