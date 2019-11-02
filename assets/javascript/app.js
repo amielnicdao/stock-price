@@ -99,7 +99,7 @@ function displayStocks() {
     })
 };
 
-// Submit button functionality
+// Submit button 
 
 $("#input-stocks").on("click", function (event) {
     event.preventDefault();
@@ -122,10 +122,9 @@ function displayNews() {
 
         for (var i = 0; i < response.articles.length; i++) {
 
-            var card = `<div class="row"><div class="col s12 m7">\
-            <div class="card">\
+            var card = `<div class="col s12 m7">\
+            <div class="card horizontal">\
               <div class="card-image">\
-              <span class="card-title">Card Title</span>\
                 <img src="${response.articles[i].urlToImage}">\
               </div>\
               <div class="card-stacked">\
